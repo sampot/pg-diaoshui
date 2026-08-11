@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#10314a" />
+    <meta
+      name="description"
+      content="釣水球：夜市紙鉤釣水球。移動釣竿讓紙圈套住水球、撈起得分，60 秒內釣到目標顆數過關。純前端 Playgrounds SAM。"
+    />
+    <title>釣水球</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎈</text></svg>"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <p class="eyebrow">懷舊</p>
+        <h1>釣水球</h1>
+        <p class="tagline">移動釣竿 · 紙圈套頸 · 撈起過關</p>
+      </header>
+
+      <div class="hud">
+        <span class="chip">時間 <b id="time">60</b></span>
+        <span class="chip">已釣 <b id="caught">0</b>/<span id="target">8</span></span>
+        <span class="chip">失敗 <b id="misses">0</b></span>
+        <span class="chip">最佳 <b id="best">0</b></span>
+      </div>
+
+      <p id="status" class="status" role="status">按「開始」釣水球</p>
+
+      <div class="stage">
+        <canvas id="game" width="360" height="300" aria-label="釣水球池塘"></canvas>
+      </div>
+
+      <div class="controls">
+        <button type="button" id="btn-down" class="down" aria-pressed="false">沉下</button>
+        <button type="button" id="btn-start" class="primary">開始</button>
+        <button type="button" id="btn-mute" class="ghost" aria-pressed="true">音效</button>
+      </div>
+
+      <details class="rules">
+        <summary>怎麼玩</summary>
+        <ul>
+          <li>左右拖曳池塘（或按 ◀▶ 鍵）移動釣竿。</li>
+          <li>按住「沉下」讓紙圈套住水球頸部；套中後放開即自動收竿撈起。</li>
+          <li>下太深會弄破紙圈（miss）；時間 60 秒內釣到 8 顆過關。</li>
+        </ul>
+      </details>
+
+      <footer class="meta">
+        <span>套準頸部、別下過頭；撈起一顆 +1。</span>
+      </footer>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
