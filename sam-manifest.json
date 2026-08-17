@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "rev": "cbe8097",
+  "files": [
+    "app.js",
+    "assets/sfx/click1.ogg",
+    "assets/sfx/click2.ogg",
+    "assets/sfx/Kenney_UI-Audio-License.txt",
+    "assets/sfx/switch1.ogg",
+    "assets/sfx/switch28.ogg",
+    "audio.js",
+    "functions.js",
+    "game.js",
+    "index.html",
+    "styles.css"
+  ]
+}
